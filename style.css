@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #08121b;
+  font-family: "Roboto", sans-serif;
+  animation-name: fadeInPage;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+:root {
+  --texts-color: #f5fbfa;
+  --icons-bg: #0ea1b1;
+}
+/* start g;obal */
+.container {
+  max-width: 1400px;
+  margin: 20px auto;
+}
+a {
+  text-decoration: none;
+}
+/* end global */
+/* start header */
+header {
+  padding: 3px;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .container .logo {
+  width: 50px;
+}
+
+header .container a {
+  color: var(--texts-color);
+  font-size: 25px;
+  font-weight: 900;
+}
+
+header .container a span {
+  color: var(--icons-bg);
+  font-size: 40px;
+}
+
+header .container nav {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+header .container nav ul {
+  display: flex;
+}
+
+header .container li {
+  padding: 0 20px;
+}
+
+header .container li a {
+  display: block;
+  color: var(--texts-color);
+  font-size: 18px;
+  font-weight: 420;
+  transition: 0.4s;
+}
+
+button[type="submit"] {
+  display: flex;
+  align-items: center;
+  background-color: #0ea1b1;
+  padding: 10px;
+  color: var(--texts-color);
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  font-weight: 550;
+}
+/* end header */
+/* start section */
+
+section .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section .container .main-txt {
+  color: var(--texts-color);
+}
+
+section .container .main-txt h1 {
+  font-size: 6.5rem;
+  letter-spacing: 3px;
+  width: 800px;
+}
+
+section .container .main-txt h1 span {
+  color: var(--icons-bg);
+}
+
+.main-png {
+  animation-name: upDown;
+  animation-iteration-count: infinite;
+  animation-duration: 3s;
+  animation-direction: alternate;
+  animation-timing-function:ease-in-out ;
+}
+
+section .container .main-txt p {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  margin-top: 20px;
+  width: 800px;
+  color: var(--icons-bg);
+  font-weight: 400;
+}
+
+button[type="button"] {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  background-color: #0ea1b1;
+  padding: 10px;
+  color: var(--texts-color);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 550;
+}
+/* end section */
+
+/* start footer */
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.services {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: var(--texts-color);
+  padding: 15px;
+  margin-top: 20px;
+  cursor: default;
+  border-radius: 16px;
+  transition: 0.5s ease;
+}
+
+
+.services .service {
+  display: flex;
+  padding: 5px;
+  margin-left: 30px;
+  margin-right: 30px;
+  
+}
+
+.services .service i {
+  color: var(--icons-bg);
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+/* end footer */
+
+/* start hovers */
+.services:hover {
+  transform: translateY(-20px);
+  background-color: #b0dbd4;
+  color: #08121b;
+}
+
+header li a:hover {
+  transform: translateY(-6px);
+  color: #0ea1b1;
+}
+/* end hovers */
+
+@keyframes upDown {
+  from {
+    transform: translateY(30px);
+  }
+
+  to {
+    transform:translateY(0px);
+  }
+}
+
+@keyframes fadeInPage {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
